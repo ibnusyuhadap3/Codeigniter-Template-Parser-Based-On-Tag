@@ -8,9 +8,10 @@ INSTALLATION
 ============
 
 First, you was install HMVC Codeigniter from https://github.com/jenssegers/CodeIgniter-HMVC-Modules. After that, install ciparser. Just download ciparser class and put it into your libraries codeigniter. Then call it with two ways:
-1. Within controller, call this class with $this->load->library('ciparser');
-2. From application/config/autoload.php file, call ciparser with $autoload['libraries'] = array('ciparser');
-
+<ol>
+<li>Within controller, call this class with <code>$this->load->library('ciparser');</code></li>
+<li>From application/config/autoload.php file, call ciparser with <code>$autoload['libraries'] = array('ciparser');</code></li>
+</ol>
 
 FUNCTIONALITY
 =============
