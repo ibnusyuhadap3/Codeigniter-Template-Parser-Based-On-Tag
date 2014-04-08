@@ -12,7 +12,7 @@ class Ciparser
 	// $key is module name
 	// $embed_template is module view path
 	
-	public function new_parse($template, $data = '', $key, $embed_template)
+	public function new_parse($template, $key, $embed_template, $data = '')
 	{
 		// this is to make $this php variable works
 		// with this, then you can call standard codeigniter tutorials, such as $this->load->view() from other file
@@ -24,15 +24,8 @@ class Ciparser
 				$this->$_ci_key =& $CI->$_ci_key;
 			}
 		}
-		
-		// check first, is 
-		$view_path = FCPATH . 'templates\\' . $template . '\\' . $template . '.php';
-		if(!file_exists($view_path))
-		{
-			return FALSE;
-		}
-		
-		// to make load view is work, then we add quate without space on third params on view() below
+				
+		// to make load view is work, then we add '' on third params on view() below
 		$template = $this->load->view($template,'',true);
 		$this->_new_parse($template, $data, $key, $embed_template);
 	}
