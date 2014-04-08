@@ -40,7 +40,7 @@ Inside your controller, add this code
 
 <pre><code>
 $data["some_data"] = "any data";
-$this->ciparser->new_parser("exampleTemplate",$data,"modules_module","exampleTargetViewModule");
+$this->ciparser->new_parser("exampleTemplate","modules_module","exampleTargetViewModule",$data);
 </code></pre>
 
 And inside your exampleTemplate.php add this code
@@ -63,12 +63,12 @@ You should to install HMVC Codeigniter first, then follow the instruction below:
 <li>Inside application/modules/welcome/controllers folder, create a php file then add this code
 
    <pre><code>
-      <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+      &lt;?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->library(array('ciparser'));
-		$this->ciparser->new_parse('template','', 'modules_welcome', 'welcome_message');
+		$this->ciparser->new_parse('template', 'modules_welcome', 'welcome_message');
 	}
 }
    </code></pre>
